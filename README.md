@@ -2,6 +2,8 @@
 An ESP32-based system for monitoring 24V analog alarm signals triggered by sensors throughout a farm. The system is made with ESPHome and Home Assistant.
 
 <Picture of the final setup>
+<img src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/b2975e0b2926ca92acbed9962f9581ac3c3f229b/resources/final_setup.jpg?sanitize=true" width="1000">
+
 
 ## Problem description
 There are 5 LEDs that represent alarms in different buildings. In order to find out whether a problem has occurred, and where said problem is, one must check these LEDs. The goal is to get these LEDs into Home Assistant as binary sensors, and notify me when a problem has occurred in any of the buildings. 
@@ -29,4 +31,8 @@ The KiCAD files for the final design of the PCB can be found in the repository.
 
 <Render of the PCB in KiCAD>
 <img src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/018acbf1bb7f07c3b3919d12287a3a8b39f2a799/resources/Render_PCB.png?sanitize=true" width="800">
+
+<Picture of the PCB with components>
+<im g src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/018acbf1bb7f07c3b3919d12287a3a8b39f2a799/resources/Render_PCB.png?sanitize=true" width="800">
+
 
