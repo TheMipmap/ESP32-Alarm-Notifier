@@ -1,5 +1,5 @@
 # ESP32-Alarm-Notifier
-An ESP32-based system for monitoring 24V analog alarm signals triggered by sensors throughout a farm. The system is made with ESPHome and Home Assistant.
+An ESP32-based system for monitoring 24V analog alarm signals triggered by sensors throughout a farm. The software side of the system is made with ESPHome, Node-RED and Home Assistant. The ESP32 used is the Olimex ESP32-POE-ISO-IND, but any PoE powered ESP32 would have worked.
 
 <Picture of the final setup>
 <img src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/b2975e0b2926ca92acbed9962f9581ac3c3f229b/resources/final_setup.jpg?sanitize=true" width="1000">
@@ -33,6 +33,6 @@ The KiCAD files for the final design of the PCB can be found in the repository.
 <img src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/018acbf1bb7f07c3b3919d12287a3a8b39f2a799/resources/Render_PCB.png?sanitize=true" width="800">
 
 <Picture of the PCB with components>
-<im g src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/018acbf1bb7f07c3b3919d12287a3a8b39f2a799/resources/Render_PCB.png?sanitize=true" width="800">
+<img src="https://github.com/TheMipmap/ESP32-Alarm-Notifier/blob/90b5f87b90269a34607039360a7028930a952716/resources/PCB_with_components.jpg?sanitize=true" width="800">
 
 
