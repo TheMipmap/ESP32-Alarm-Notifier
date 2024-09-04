@@ -1,0 +1,96 @@
+esphome:
+  name: olimex-poe-iso
+  friendly_name: Stald-alarm-olimex
+
+esp32:
+  board: esp32-poe-iso
+  framework:
+    type: esp-idf
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret encryption_key
+
+ota:
+  password: !secret ota_pass
+
+
+############################################3 (Either WiFi or Ethernet NOT both)
+# wifi:
+#   ssid: !secret wifi_ssid
+#   password: !secret wifi_password
+
+#   # Enable fallback hotspot (captive portal) in case wifi connection fails
+#   ap:
+#     ssid: "Olimex-Poe-Iso Fallback Hotspot"
+#     password: "dyKVHxyUO0aY"
+
+# captive_portal:
+##############################################
+
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+
+  manual_ip:
+    static_ip: 192.168.10.21
+    gateway: 192.168.10.1
+    subnet: 255.255.255.0
+
+
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO2
+      inverted: true
+      mode: INPUT_PULLUP
+    name: "Olimex GPIO 2"
+    filters:
+      - delayed_on: 10ms
+    device_class: problem
+  - platform: gpio
+    pin:
+      number: GPIO3
+      inverted: true
+      mode: INPUT_PULLUP
+    name: "Olimex GPIO 3"
+    filters:
+      - delayed_on: 10ms
+    device_class: problem
+  - platform: gpio
+    pin:
+      number: GPIO4
+      inverted: true
+      mode: INPUT_PULLUP
+    name: "Olimex GPIO 4"
+    filters:
+      - delayed_on: 10ms
+    device_class: problem
+  - platform: gpio
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Olimex GPIO 5"
+    filters:
+      - delayed_on: 10ms
+    device_class: problem
+  - platform: gpio
+    pin:
+      number: GPIO13
+      inverted: true
+      mode: INPUT_PULLUP
+    name: "Olimex GPIO 13"
+    filters:
+      - delayed_on: 10ms
+    device_class: problem
